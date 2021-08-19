@@ -1,10 +1,45 @@
-/* * {
+* {
   border: 0;
   padding: 0;
   box-sizing: border-box;
 }
-.theCalculator {
-  background-color: rgba(180, 142, 94, 0.63);
-  height: 499px;
-  width: auto;
-} */
+#allCalculator {
+  width: 300px;
+  border: solid 2px;
+  height: 524px;
+}
+
+input {
+  width: 290px;
+  height: 50px;
+  border-radius: 30px;
+  border: solid 2px;
+}
+button {
+  border: solid 1px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+}
+#btnInput {
+  background-color: rgb(0, 255, 170);
+}
+
+.numbers {
+  background-color: rgb(255, 234, 196);
+}
+#dubele,
+#division,
+#plus,
+#min {
+  background-color: aquamarine;
+}
+#theNumbrs {
+  display: flex;
+  flex-wrap: wrap;
+}
+#sulushion {
+  width: 296px;
+  height: 141px;
+  background-color: blueviolet;
+}
