@@ -5,40 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>calculator</title>
   </head>
+
   <body>
-    <section class="theCalculator">
-      <p>here ther ansewar</p>
-      <article>
-        <button>del</button>
-        <button>som</button>
-        <button>/</button>
-        <button>%</button>
-        <br/>
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button>*</button>
-        <br/>
-
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button>-</button>
-        <br/>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>+</button>
+    <header></header>
+    <main>
+      <form>
+        <label>num1:</label> <br />
+        <input type="number" id="inputNum1" />
         <br />
-        <button>som</button>
+        <label>num2:</label> <br />
+        <input type="number" id="inputNum2" />
+        <br />
 
-        <button>0</button>
-        <button>.</button>
-        <button>=</button>
-      </article>
-    </section>
-    <script src="main.js"></script>
+        <button id="btnInput" type="button"></button>
+      </form>
+      <section>
+        <button type="button" class="numbers">1</button>
+        <button class="numbers">2</button>
+        <button class="numbers">3</button>
+        <button class="numbers">4</button>
+        <button class="numbers">5</button>
+        <button class="numbers">6</button>
+        <button class="numbers">7</button>
+        <button class="numbers">8</button>
+        <button class="numbers">9</button>
+        <button class="numbers">0</button>
+      </section>
+      <section id="operators">
+        <button id="dubele" type="button">*</button>
+        <button id="division" type="button">/</button>
+        <button id="plus" type="button">+</button>
+        <button id="min" type="button">-</button>
+        <br />
+      </section>
+    </main>
+
+    <footer></footer>
+
+    <script src="main.js" type="text/javascript"></script>
   </body>
 </html>

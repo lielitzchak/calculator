@@ -1,25 +1,34 @@
-function minus(num1, num2) {
-    var sum = num1 - num2
-    return sum
+const inputNum1 = document.getElementById("inputNum1");
+const inputNum2 = document.getElementById("inputNum2");
+const btnInput = document.getElementById("btnInput");
+const plusInput = document.getElementById("plus");
+const minInput = document.getElementById("min");
+const dublInput = document.getElementById("dubele");
+const divisionInput = document.getElementById("division");
+const numbers = document.getElementsByClassName("numbers");
+
+for (let i = 0; i < numbers.length; i++) {
+  numbers[i].addEventListener("click", function () {
+    inputNum1.value += numbers[i].innerText;
+  });
 }
 
-console.log(minus(4, 2));
+plusInput.addEventListener("click", function () {
+  let sum = +inputNum1.value + +inputNum2.value;
+  console.log(sum);
+});
 
-function multi(num1, num2) {
-    sum = num1 * num2
-    return sum
+minInput.addEventListener("click", function () {
+  let sum = +inputNum1.value - +inputNum2.value;
+  console.log(sum);
+});
 
-}
-console.log(multi(4, 2));
-function chiluk(num1, num2) {
-    sum = num1 / num2
-    return sum
-}
-console.log(chiluk(4, 2));
-function plus(num1, num2) {
+dublInput.addEventListener("click", function () {
+  let sum = +inputNum1.value * +inputNum2.value;
+  console.log(sum);
+});
 
-    sum = num1 + num2
-    return sum
-}
-plus(4, 2)
-console.log(plus(2, 4));
+divisionInput.addEventListener("click", function () {
+  let sum = +inputNum1.value / +inputNum2.value;
+  console.log(sum);
+});
