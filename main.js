@@ -42,8 +42,6 @@ let operator;
 let shouldClear = false;
 let Equal = document.getElementById("Equal");
 let clean = document.getElementById("clean");
-
-//? Start
 let btnNumbers = document.getElementsByClassName("numbers");
 
 for (let i = 0; i < btnNumbers.length; i++) {
@@ -51,7 +49,6 @@ for (let i = 0; i < btnNumbers.length; i++) {
 }
 for (let i = 0; i < opers.length; i++) {
   opers[i].onclick = () => {
-    // opers[i].style.color = "red";
     num = Number(Solution.innerText);
     operator = opers[i].value;
     shouldClear = true;
@@ -84,8 +81,6 @@ function cal(num1, num2, op) {
       return num1 / num2;
   }
 }
-
-//!\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 cleanAll.onclick = () => {
   num = 0;
