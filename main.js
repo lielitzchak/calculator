@@ -37,9 +37,11 @@
 let cleanAll = document.getElementById("cleanAll");
 let Solution = document.getElementById("Solution");
 let opers = document.getElementsByClassName("oper");
+let allResult = document.getElementById("allResult");
 let num;
 let operator;
-let shouldClear = false;
+let result;
+// let shouldClear = false;
 let Equal = document.getElementById("Equal");
 let clean = document.getElementById("clean");
 let btnNumbers = document.getElementsByClassName("numbers");
@@ -51,39 +53,47 @@ for (let i = 0; i < opers.length; i++) {
   opers[i].onclick = () => {
     num = Number(Solution.innerText);
     operator = opers[i].value;
-    shouldClear = true;
+    // shouldClear = true;
+    result = num + operator;
+    Solution.innerText = result;
+    // console.log(result);
+    console.log(num);
   };
 }
 function concat_number(num) {
-  if (shouldClear == true) {
-    Solution.innerText = "";
-    shouldClear = false;
-  }
+  // if (shouldClear == true) {
+  // Solution.innerText = "";
+  // shouldClear = false;
+  // }
+  console.log(num);
   Solution.innerText += num;
 }
 
 Equal.onclick = () => {
-  Solution.innerText = cal(num, Number(Solution.innerText), operator);
+  // (allResult.innerText = `${result}`),
+    cal(num, Number(Solution.innerText), operator);
+  Solution.innerText = "";
 };
 
 function cal(num1, num2, op) {
   switch (op) {
     case "+":
-      return num1 + num2;
+      return (allResult.innerText = num1 + num2);
 
     case "-":
-      return num1 - num2;
+      return (allResult.innerText = num1 - num2);
 
     case "*":
-      return num1 * num2;
+      return (allResult.innerText = num1 * num2);
 
     case "/":
-      return num1 / num2;
+      return (allResult.innerText = num1 / num2);
   }
 }
 
 cleanAll.onclick = () => {
   num = 0;
+  allResult.innerText = "";
   Solution.innerText = "";
 };
 clean.onclick = () => {
