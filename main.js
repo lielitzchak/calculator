@@ -38,10 +38,10 @@ let cleanAll = document.getElementById("cleanAll");
 let Solution = document.getElementById("Solution");
 let opers = document.getElementsByClassName("oper");
 let allResult = document.getElementById("allResult");
-let num;
+let num1;
 let operator;
 let result;
-// let shouldClear = false;
+let isFull = true;
 let Equal = document.getElementById("Equal");
 let clean = document.getElementById("clean");
 let btnNumbers = document.getElementsByClassName("numbers");
@@ -49,30 +49,32 @@ let btnNumbers = document.getElementsByClassName("numbers");
 for (let i = 0; i < btnNumbers.length; i++) {
   btnNumbers[i].onclick = () => concat_number(btnNumbers[i].value);
 }
-for (let i = 0; i < opers.length; i++) {
-  opers[i].onclick = () => {
-    num = Number(Solution.innerText);
-    operator = opers[i].value;
-    // shouldClear = true;
-    result = num + operator;
-    Solution.innerText = result;
-    // console.log(result);
-    console.log(num);
-  };
-}
 function concat_number(num) {
-  // if (shouldClear == true) {
-  // Solution.innerText = "";
-  // shouldClear = false;
-  // }
-  console.log(num);
   Solution.innerText += num;
+  console.log(num);
 }
 
+for (let i = 0; i < opers.length; i++) {
+  opers[i].onclick = () => {
+    num1 = Solution.innerText;
+    operator = opers[i].value;
+    result = num1 + operator;
+    console.log(result, "result");
+    Solution.innerText = result;
+    // console.log(operator);
+    // console.log(num1);
+    console.log(num1, "num1");
+  };
+}
 Equal.onclick = () => {
-  // (allResult.innerText = `${result}`),
-    cal(num, Number(Solution.innerText), operator);
-  Solution.innerText = "";
+  console.log(num1);
+  console.log(Solution.innerText);
+  allResult.innerText = cal(
+    Number(num1),
+    parseInt(Solution.innerText.substr(num1.length)),
+    operator
+  );
+  console.log(allResult.innerText);
 };
 
 function cal(num1, num2, op) {
@@ -92,7 +94,7 @@ function cal(num1, num2, op) {
 }
 
 cleanAll.onclick = () => {
-  num = 0;
+  num1 = 0;
   allResult.innerText = "";
   Solution.innerText = "";
 };
