@@ -12,7 +12,7 @@ body {
 main {
   width: 100%;
   height: 100%;
-  padding: 4%;
+  padding: 0.1%;
 }
 #allCalculator {
   margin: auto;
@@ -48,7 +48,14 @@ button {
 button:hover {
   background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
-
+#operators {
+  margin-left: 5%;
+}
+#cleanAneEpual {
+  display: flex;
+  justify-content: space-evenly;
+  margin-right: 5%;
+}
 #theNumbrs {
   display: flex;
   flex-wrap: wrap;
